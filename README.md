@@ -14,4 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-# shopingmall_flutter
+
+# 플러터로 만드는 쇼핑몰
+
+## 구현한 기능 
+- 회원가입 / 로그인
+- 상품 목록 조회 / 상세 조회
+- 장바구니에 상품 담기/ 삭제
+
+
