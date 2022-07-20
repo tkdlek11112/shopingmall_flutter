@@ -22,4 +22,5 @@ samples, guidance on mobile development, and a full API reference.
 - 상품 목록 조회 / 상세 조회
 - 장바구니에 상품 담기/ 삭제
 
-
+### 플러터로 쇼핑몰 만들기 2까지의 내용
+https://cholol.tistory.com/572
