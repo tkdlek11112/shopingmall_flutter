@@ -30,6 +30,7 @@ class FirebaseAuthProvider with ChangeNotifier {
         prefs.setBool('isLogin', true);
         prefs.setString('email', email);
         prefs.setString('password', password);
+        prefs.setString('uid', user!.uid);
       });
       return AuthStatus.loginSuccess;
     } catch (e) {
@@ -42,6 +43,7 @@ class FirebaseAuthProvider with ChangeNotifier {
     prefs.setBool('isLogin', false);
     prefs.setString('email', '');
     prefs.setString('password', '');
+    prefs.setString('uid', '');
     user = null;
     await authClient.signOut();
   }

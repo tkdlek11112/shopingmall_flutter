@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../models/model_cart.dart';
 
 class SplashScreen extends StatefulWidget {
 
@@ -15,7 +18,10 @@ class _SplashScreenState extends State<SplashScreen>{
 
   Future<bool> checkLogin() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+    final cartProvider = Provider.of<CartProvider>(context, listen: false);
     bool isLogin = prefs.getBool('isLogin') ?? false;
+    String uid = prefs.getString('uid') ?? '';
+    cartProvider.fetchCartItemsOrCreate(uid);
     return isLogin;
   }
 
